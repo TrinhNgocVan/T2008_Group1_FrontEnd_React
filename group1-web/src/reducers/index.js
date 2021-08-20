@@ -1,9 +1,9 @@
-// import {combineReducers} from "redux";
+import  {combineReducers} from "redux";
+import hobbyReducer from './reducer.hobby';
+import userReducer from "./reducer.user";
+const rootReducer = combineReducers({
+    hobby : hobbyReducer,
+    user : userReducer,
+})
 
-const initialState = {
-  articles : []
-};
-function rootReducer(state = initialState , action){
-  return state ;
-}
 export default rootReducer;

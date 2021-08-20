@@ -1,15 +1,13 @@
-// import User_service from "../../../services/User_service"
+
 import './table.css'
 import React, {useEffect, useState} from "react";
-import axios from "axios";
-import {ENV_SERVER} from "../../../shared/env/environment";
-import {USER_LIST} from "../../../shared/env/url_properties";
 import {Link} from "react-router-dom";
+import {GetListUsers} from "../../../services/user.service";
 
 export default function User_list(){
         const [users , setUsers] = useState([]);
-        useEffect(()=>{
-           axios.get(ENV_SERVER+USER_LIST).then(rs => setUsers(rs.data));
+        useEffect( async ()=> {
+           setUsers(await  GetListUsers());
         },[])
 
 
