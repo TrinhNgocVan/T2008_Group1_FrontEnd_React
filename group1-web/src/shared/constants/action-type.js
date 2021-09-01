@@ -1,2 +1,3 @@
 
 export const ADD_ARTICLE = "ADD_ARTICLE";
+export const LIST_DAY_MONTN = [31,28,31,30,31,30,31,31,30,31,30,31]

@@ -1,8 +1,17 @@
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import logo from '../pages/image/keysoft-logo.png';
 import placeHolder from '../pages/image/placeholder.jpg';
 
 function Header(){
+    let history = useHistory();
+    const onclickFunction = () => {
+        localStorage.setItem("Token",null);
+      history.push("/login");
+      }
+        let profile = localStorage.getItem("profile");
+        if(profile == null){
+            profile = {email :"demo"}
+        }
     return(
     <div className="navbar navbar-expand-md navbar-light">
         <div className="navbar1 navbar-brand" >
@@ -29,14 +38,14 @@ function Header(){
 
 
                 <li className="nav-item dropdown dropdown-user">
-                    <Link href=""  className="navbar-nav-link dropdown-toggle" data-toggle="dropdown"><img src={placeHolder} className="rounded-circle" alt="" /><span>cust@keysoft.vn</span></Link>
+                    <Link href=""  className="navbar-nav-link dropdown-toggle" data-toggle="dropdown"><img src={placeHolder} className="rounded-circle" alt="" /><span>{ profile.email }< /span></Link>
                     <div className="dropdown-menu dropdown-menu-right">
 
 
                         <div className="dropdown-divider" />
 
                         <Link  className="dropdown-item"><i className="icon-rotate-ccw2" />Thay đổi mật khẩu</Link>
-                        <Link to="#"  className="dropdown-item"><i className="icon-switch2" />Đăng xuất</Link>
+                        <button  onClick={onclickFunction}  className="dropdown-item"><i className="icon-switch2" />Đăng xuất</button>
                     </div>
                 </li>
             </ul>

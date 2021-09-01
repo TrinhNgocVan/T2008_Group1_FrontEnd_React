@@ -503,7 +503,7 @@ var EchartsPiesDonuts = function() {
 
                 // Add title
                 title: {
-                    text: 'Employee\'s salary review',
+                    text: 'Employee\'s profile review',
                     subtext: 'Senior front end developer',
                     left: 'center',
                     textStyle: {
@@ -614,7 +614,7 @@ var EchartsPiesDonuts = function() {
 
                 // Add title
                 title: {
-                    text: 'Employee\'s salary review',
+                    text: 'Employee\'s profile review',
                     subtext: 'Senior front end developer',
                     left: 'center',
                     textStyle: {

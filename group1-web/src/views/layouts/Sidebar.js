@@ -49,7 +49,7 @@ export default class Sidebar extends React.Component{
                             <li className="nav-item"><Link menu="homeMenu" to="/" className="nav-link "><i className="icon-home4" /><span>Trang chủ</span></Link></li>
 
 
-                            <li className="nav-item"><Link menu="dashboardMenu" to="/dashboard/list" className="nav-link "><i className="icon-newspaper" aria-hidden="true" /><span>Monitoring</span></Link></li>
+                            <li className="nav-item"><Link menu="dashboardMenu" to="/dashboard/list" className="nav-link "><i className="icon-newspaper" aria-hidden="true" /><span>Quản lý tài chính</span></Link></li>
 
 
                             <li className=" nav-item nav-item-submenu ">
@@ -62,41 +62,29 @@ export default class Sidebar extends React.Component{
 
 
 
-                            <li className="nav-item"><Link menu="custMenu" to="/customer/list" className="nav-link "><i className="fa fa-server" aria-hidden="true" /><span>Quản lý khách hàng</span></Link></li>
+                            <li className="nav-item"><Link menu="custMenu" to="/salary/profile/list/" className="nav-link "><i className="fa fa-server" aria-hidden="true" /><span>Hồ sơ lương nhân viên </span></Link></li>
 
 
 
-                            <li className="nav-item"><Link menu="documentMenu" to="/document/list" className="nav-link "><i className="icon-books" aria-hidden="true" /><span>Quản lý tài liệu</span></Link></li>
+                            <li className="nav-item"><Link menu="documentMenu" to="/document/list" className="nav-link "><i className="icon-books" aria-hidden="true" /><span>Công nợ khác</span></Link></li>
 
-
+                            {/*
 
                             <li className="nav-item"><Link menu="categoryMenu" to="/category/list" className="nav-link ">< i className="icon-coin-dollar" aria-hidden="true" /><span>Danh mục thiết bị</span></Link></li>
 
-
+                            */}
 
                             <li className=" nav-item nav-item-submenu ">
-                                <Link  to="#" className="nav-link "><i className="icon-coins" aria-hidden="true" /><span>Quản lý tài sản</span></Link>
-                                <ul className="nav nav-group-sub" >
-                                    <li className="nav-item"><Link menu="assetList" to="/asset/list" className="nav-link">Danh sách tài sản</Link></li>
-
-                                    <li className="nav-item"><Link menu="assetAdd" to="/asset/form" className="nav-link">Nhập kho</Link></li>
-
-                                    <li className="nav-item nav-item-submenu">
-                                        <Link to="#" className="nav-link">Xuất kho</Link>
-                                        <ul className="nav nav-group-sub"  >
-                                            <li className="nav-item"><Link menu="assetClient" to="/export/client/form" className="nav-link">Khách hàng</Link></li>
-                                            <li className="nav-item"><Link menu="assetInternal" to="/export/internal/form" className="nav-link">Nội bộ</Link></li>
-                                        </ul>
-                                    </li>
-
-                                    <li className="nav-item"><Link menu="assetHistMenu" to="/assetHistory/list" className="nav-link "><span>Lịch sử tài sản</span></Link></li>
-                                    <li className="nav-item"><Link menu="assetExport" to="/export/list" className="nav-link">Đơn hàng đã xuất</Link></li>
+                                <Link  to="/salary/list" className="nav-link "><i className="icon-coins" aria-hidden="true" /><span>Danh sách trả Lương</span></Link>
+                                <ul className="nav nav-group-sub"  >
+                                    <li className="nav-item"><Link menu="assetClient" to="/salary/count" className="nav-link">Quyết toán lương</Link></li>
+                                    <li className="nav-item"><Link menu="assetInternal" to="/otherDebit/count" className="nav-link">Công nợ cá nhân</Link></li>
                                 </ul>
                             </li>
 
-
+                            {/*
                             <li className="nav-item"><Link menu="quoteMenu" to="/quote/list" className="nav-link "><i className="icon-cash3" aria-hidden="true" /><span>Báo giá</span></Link></li>
-
+                            */}
 
 
 
